@@ -15,6 +15,8 @@
 
 <!-- Styling for Storybook: https://storybook.js.org/docs/react/essentials/viewport -->
 
+<!-- MDX: https://storybook.js.org/docs/react/api/mdx -->
+
 <h2>📝 <strong>References</strong></h2>
 <ol>
   <li>
