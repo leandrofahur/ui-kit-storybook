@@ -1,8 +1,7 @@
 import React from "react";
 import { GlobalStyle } from "../src/styles/GlobalStyle";
 
-import { INITIAL_VIEWPORTS } from "@storybook/addon-viewport";
-
+// viewports configuration for storybook:
 const viewports = {
     IPhone5SE: {
         name: "IPhone 5/SE",
@@ -28,13 +27,21 @@ const viewports = {
         },
         type: "mobile",
     },
+    Tablet: {
+        name: "Tablet",
+        styles: {
+            width: "768px",
+            height: "1024px",
+        },
+        type: "tablet",
+    },
     Notebook: {
         name: "Notebook",
         styles: {
             width: "1280px",
             height: "720px",
         },
-        type: "Desktop",
+        type: "desktop",
     },
     Desktop: {
         name: "Desktop",
@@ -42,7 +49,7 @@ const viewports = {
             width: "1440px",
             height: "1024px",
         },
-        type: "Desktop",
+        type: "desktop",
     },
     LargeMonitor: {
         name: "Large Monitor",
@@ -50,7 +57,7 @@ const viewports = {
             width: "1512px",
             height: "982ppx",
         },
-        type: "Desktop",
+        type: "desktop",
     },
 };
 

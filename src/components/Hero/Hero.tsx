@@ -1,17 +1,17 @@
 import { ReactNode } from "react";
-import { Container, Content, Title, Wrapper } from "./Hero.styled";
+import { Container, Content, Wrapper } from "./Hero.styled";
 
 export interface HeroProps {
-    image: string;
-    children: ReactNode;
-    title: string;
+    /** Background Image */
+    image?: string;
+    /** A children that accepts a ReactNode */
+    children?: ReactNode;
 }
 
-const Hero = ({ image, children, title }: HeroProps) => {
+const Hero = ({ image, children }: HeroProps) => {
     return (
         <Container>
             <Wrapper image={image}>
-                <Title>{title}</Title>
                 <Content>{children}</Content>
             </Wrapper>
         </Container>

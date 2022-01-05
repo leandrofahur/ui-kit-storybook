@@ -37,15 +37,6 @@ export const Wrapper = styled.div<WrapperProps>`
     padding: 30px;
 `;
 
-export const Title = styled.h1`
-    font-weight: 700;
-    line-height: 1.7rem;
-    letter-spacing: 0.1rem;
-    // TODO: Remove hardcoded color:
-    color: white;
-    padding-bottom: 20px;
-`;
-
 export const Content = styled.div`
     // TODO: Remove fonts type and weight hardcoded:
     ul {
