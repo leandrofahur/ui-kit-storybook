@@ -11,7 +11,7 @@ export interface HeroProps {
 const Hero = ({ image, children }: HeroProps) => {
     return (
         <Container>
-            <Wrapper image={image}>
+            <Wrapper image={image} data-testid="hero-bg-image">
                 <Content>{children}</Content>
             </Wrapper>
         </Container>

@@ -23,11 +23,12 @@ export const Container = styled.div`
 export const Wrapper = styled.div<WrapperProps>`
     ${(props) =>
         css`
-            background: url(${props.image}), rgba(0, 0, 0, 0.4);
+            background-image: url(${props.image});
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
             background-blend-mode: overlay;
+            background-color: rgba(0, 0, 0, 0.4);
         `}
     display: flex;
     flex-direction: column;
@@ -49,6 +50,7 @@ export const Content = styled.div`
         font-size: 1.2rem;
         font-weight: 300;
         line-height: 1.5rem;
+        text-align: center;
     }
     // TODO: Remove hardcoded color:
     color: white;
