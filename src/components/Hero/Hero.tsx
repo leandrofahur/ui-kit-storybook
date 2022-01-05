@@ -1,11 +1,20 @@
-import React from "react";
+import { ReactNode } from "react";
+import { Container, Content, Title, Wrapper } from "./Hero.styled";
 
-const Hero = ({ title, children }: any) => {
+export interface HeroProps {
+    image: string;
+    children: ReactNode;
+    title: string;
+}
+
+const Hero = ({ image, children, title }: HeroProps) => {
     return (
-        <div>
-            <h1>{title}</h1>
-            {children}
-        </div>
+        <Container>
+            <Wrapper image={image}>
+                <Title>{title}</Title>
+                <Content>{children}</Content>
+            </Wrapper>
+        </Container>
     );
 };
 

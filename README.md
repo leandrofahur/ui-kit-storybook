@@ -13,6 +13,8 @@
 <p>Make sure to have installed the extensions EditorConfig and Prettier</p>
 <br/>
 
+<!-- Styling for Storybook: https://storybook.js.org/docs/react/essentials/viewport -->
+
 <h2>📝 <strong>References</strong></h2>
 <ol>
   <li>
