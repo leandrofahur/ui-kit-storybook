@@ -75,4 +75,8 @@ export const GlobalStyle = createGlobalStyle`
             font-size: 1.25rem;
         }
     }
+
+    a {
+        text-decoration: none;
+    }
 `;
