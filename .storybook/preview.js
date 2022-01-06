@@ -1,6 +1,7 @@
 import React from "react";
-import { GlobalStyle } from "../src/styles/GlobalStyle";
 import GlobalStyleComposed from "../src/styles/GlobalStyleComposed";
+import { ThemeProvider } from "styled-components";
+import { theme } from "../src/config/theme";
 
 // viewports configuration for storybook:
 const viewports = {
@@ -78,8 +79,10 @@ export const parameters = {
 export const decorators = [
     (Story) => (
         <>
-            <GlobalStyleComposed />
-            <Story />
+            <ThemeProvider theme={theme}>
+                <GlobalStyleComposed />
+                <Story />
+            </ThemeProvider>
         </>
     ),
 ];

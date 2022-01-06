@@ -34,6 +34,7 @@ export const Wrapper = styled.div<WrapperProps>`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
 
     padding: 30px;
 `;

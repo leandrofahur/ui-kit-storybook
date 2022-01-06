@@ -14,23 +14,28 @@ export default {
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
 const Template: Story<HeroProps> = (args) => <Hero {...args} />;
 
-export const Basic = () => {
-    return (
-        <Hero image={HeroCover}>
-            <h1>Hero</h1>
-        </Hero>
-    );
+export const Basic = Template.bind({});
+Basic.args = {
+    image: HeroCover,
+    children: (
+        <>
+            <h1>Title</h1>
+            <h2>Subtitle</h2>
+        </>
+    ),
 };
 
-export const WithList = () => {
-    return (
-        <Hero image={HeroCover}>
-            <h1>Hero</h1>
+export const WithList = Template.bind({});
+WithList.args = {
+    image: HeroCover,
+    children: (
+        <>
+            <h1>Title</h1>
             <ul>
                 <li>Item 01</li>
                 <li>Item 02</li>
                 <li>Item 03</li>
             </ul>
-        </Hero>
-    );
+        </>
+    ),
 };
