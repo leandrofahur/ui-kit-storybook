@@ -14,8 +14,9 @@
 <br/>
 
 <!-- Styling for Storybook: https://storybook.js.org/docs/react/essentials/viewport -->
-
 <!-- MDX: https://storybook.js.org/docs/react/api/mdx -->
+
+<!-- yarn upgrade --latest update form time to time the project -->
 
 <h2>📝 <strong>References</strong></h2>
 <ol>
