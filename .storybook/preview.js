@@ -2,6 +2,7 @@ import React from "react";
 import GlobalStyleComposed from "../src/styles/GlobalStyleComposed";
 import { ThemeProvider } from "styled-components";
 import { theme } from "../src/config/theme";
+// import "!style-loader!css-loader!sass-loader!../src/styles/reset.css";
 
 // viewports configuration for storybook:
 const viewports = {
