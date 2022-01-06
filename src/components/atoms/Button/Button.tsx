@@ -31,7 +31,7 @@ export interface ButtonProps extends HTMLAttributes<HTMLButtonElement> {
     rightIcon?: ElementType;
 
     /** Provide a href if the button behaves like an anchor tag. */
-    href?: string;
+    href?: string | undefined;
 
     /** Props for the inner text of the button */
     children?: ReactNode;
@@ -62,7 +62,7 @@ const Button = ({
             isDisabled={isDisabled}
             disabled={isDisabled}
             onClick={onClick}
-            href={href}
+            href={isDisabled ? undefined : href}
             target="_blank"
         >
             {leftIcon && <Icon as={leftIcon} isLeft />}
