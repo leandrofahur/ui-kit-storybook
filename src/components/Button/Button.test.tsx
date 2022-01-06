@@ -1,25 +1,42 @@
-import React, { ReactNode } from "react";
-import { render, screen } from "@testing-library/react";
-import Button from "./Button";
+import { render, fireEvent, screen } from "test-utils";
+import Button, { VariantProps } from "./Button";
 
 import "@testing-library/jest-dom/extend-expect";
 import "jest-styled-components";
 
-import { ThemeProvider } from "styled-components";
-import { theme } from "../../config/theme";
-
-const TestProvider = ({ children }: any) => {
-    return <ThemeProvider theme={theme}>{children}</ThemeProvider>;
-};
-
 test("Renders Button with children", () => {
     render(
-        <TestProvider>
-            <Button variant={"primary"}>
-                <p>Hello World</p>
-            </Button>
-        </TestProvider>
+        <Button variant={"primary"}>
+            <p>Hello World</p>
+        </Button>,
+        {}
     );
 
     expect(screen.getByText("Hello World")).toBeInTheDocument();
 });
+
+test("Triggers an event onClick", () => {
+    const handleClick = jest.fn();
+
+    render(
+        <Button variant={"primary"} onClick={handleClick}>
+            <p>Hello World</p>
+        </Button>,
+        {}
+    );
+
+    fireEvent.click(screen.getByRole("button"));
+
+    expect(handleClick).toBeCalled();
+});
+
+test.each<VariantProps>([["primary"], ["secondary"], ["danger"], ["success"]])(
+    "Renders the button using the variant %i",
+    (variant) => {
+        const { asFragment } = render(
+            <Button variant={variant}>Button</Button>,
+            {}
+        );
+        expect(asFragment).toMatchSnapshot();
+    }
+);
