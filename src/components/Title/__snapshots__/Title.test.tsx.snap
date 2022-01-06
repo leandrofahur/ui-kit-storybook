@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Renders Title with children 1`] = `
+exports[`Renders Title with children and matches with snapshot 1`] = `
 <DocumentFragment>
   .c0 h1,
 .c0 h2,
