@@ -15,6 +15,7 @@ export const BaseButton = styled.button<ButtonProps>`
     font-size: 0.8rem;
     font-weight: 600;
     text-transform: uppercase;
+    letter-spacing: 0.1rem;
 
     padding: 12px 24px;
 
@@ -27,7 +28,12 @@ export const BaseButton = styled.button<ButtonProps>`
     transition: ${(props) =>
         props.isDisabled ? "not-allowed" : "all 0.2s ease-in-out"};
 
-    opacity: ${(props) => (props.isDisabled ? "0.7" : "1")};
+    opacity: ${(props) => (props.isDisabled ? "0.6" : "1")};
+
+    &:hover {
+        transform: ${(props) =>
+            props.isDisabled ? "scale(1)" : "scale(1.05)"};
+    }
 `;
 
 // A variant type is defined as an extension of the base button:
@@ -42,7 +48,7 @@ export const VariantButton = styled(BaseButton)`
             ? `1px solid ${props.theme.colors.secondary.color}`
             : "none"};
 
-    &:hover {
+    &:hover:enabled {
         color: ${(props) =>
             props.variant === "secondary"
                 ? `${props.theme.colors.secondary.backgroundColor}`
@@ -60,7 +66,7 @@ export const CustomButton = styled(VariantButton)`
     border: ${(props) =>
         props.variant === "secondary" ? `1px solid ${props.color}` : `none`};
 
-    &:hover {
+    &:hover:enabled {
         color: ${(props) =>
             props.variant === "secondary" ? `${props.backgroundColor}` : ""};
         background-color: ${(props) => props._hover};

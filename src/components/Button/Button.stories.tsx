@@ -1,6 +1,8 @@
 import { Story, Meta } from "@storybook/react";
 import Button, { ButtonProps } from "./Button";
 
+import styled from "styled-components";
+
 import { GiFruitBowl } from "react-icons/gi";
 import { GoCloudDownload } from "react-icons/go";
 
@@ -105,4 +107,93 @@ RightIcon.args = {
     "aria-label": "Anchor",
     rightIcon: GoCloudDownload,
     children: "Download",
+};
+
+// --------------------------------------------------------------------------------------------------------------------
+const Container = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px;
+
+    & > * {
+        margin: 0 10px;
+    }
+`;
+
+export const All = () => {
+    return (
+        <>
+            <h5>Variants</h5>
+            <Container>
+                <Button variant="primary">Primary</Button>
+                <Button variant="secondary">Secondary</Button>
+                <Button variant="danger">Danger</Button>
+                <Button variant="success">Success</Button>
+            </Container>
+            <h5>Customs</h5>
+            <Container>
+                <Button
+                    variant="primary"
+                    color="#fff"
+                    backgroundColor="#3182ce"
+                    _hover="#4299e1"
+                >
+                    Custom
+                </Button>
+                <Button
+                    variant="secondary"
+                    color="#3182ce"
+                    backgroundColor="#fff"
+                    _hover="#4299e1"
+                >
+                    Custom
+                </Button>
+            </Container>
+            <h5>Disable Custom</h5>
+            <Container>
+                <Button variant="primary" isDisabled>
+                    Primary
+                </Button>
+                <Button variant="secondary" isDisabled>
+                    Secondary
+                </Button>
+            </Container>
+            <h5>Clickable, Disabled State and Anchor</h5>
+            <Container>
+                <Button
+                    variant="primary"
+                    color="#fff"
+                    backgroundColor="#805ad5"
+                    _hover="#9f7aea"
+                    onClick={() =>
+                        alert("What does a vegan zombie eat? GRAAIIIIIIIINS 🐱")
+                    }
+                >
+                    Click Me!
+                </Button>
+                <Button
+                    variant="primary"
+                    color="#fff"
+                    backgroundColor="#805ad5"
+                    _hover="#9f7aea"
+                    isDisabled
+                    onClick={() =>
+                        alert("What does a vegan zombie eat? GRAAIIIIIIIINS")
+                    }
+                >
+                    Disabled
+                </Button>
+                <Button
+                    variant="primary"
+                    color="#fff"
+                    backgroundColor="#805ad5"
+                    _hover="#9f7aea"
+                    href="https://veganofoods.com"
+                >
+                    Anchor
+                </Button>
+            </Container>
+        </>
+    );
 };

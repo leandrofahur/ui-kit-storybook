@@ -25,7 +25,7 @@ const Container = styled.div`
 export const All = () => {
     return (
         <Container>
-            <h4>Typography</h4>
+            <h5>Typography</h5>
             <Title as="h6">Title</Title>
             <Title as="h5">Title</Title>
             <Title as="h4">Title</Title>
