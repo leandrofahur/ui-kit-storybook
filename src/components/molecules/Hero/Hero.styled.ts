@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { Breakpoints, breakpointAt } from "../../styles/Breakpoints";
+import { Breakpoints, breakpointAt } from "../../../styles/Breakpoints";
 
 type WrapperProps = {
     image?: string;

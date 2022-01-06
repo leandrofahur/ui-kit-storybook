@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Heading = styled.div`
+export const Title = styled.div`
     h1,
     h2,
     h3,

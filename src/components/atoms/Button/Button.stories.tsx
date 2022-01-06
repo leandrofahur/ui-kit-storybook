@@ -8,7 +8,7 @@ import { GoCloudDownload } from "react-icons/go";
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-    title: "Components/Button",
+    title: "Components/atoms/Button",
     component: Button,
     argTypes: {},
 } as Meta<ButtonProps>;

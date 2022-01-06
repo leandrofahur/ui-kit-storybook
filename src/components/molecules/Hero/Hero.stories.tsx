@@ -2,11 +2,11 @@ import React from "react";
 import { Story, Meta } from "@storybook/react";
 import Hero, { HeroProps } from "./Hero";
 
-import HeroCover from "../../assets/images/hero.jpeg";
+import HeroCover from "../../../assets/images/hero.jpeg";
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-    title: "Layouts/Hero",
+    title: "Components/molecules/Hero",
     component: Hero,
     argTypes: {},
 } as Meta<HeroProps>;

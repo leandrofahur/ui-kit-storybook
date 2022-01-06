@@ -30,13 +30,15 @@ test("Triggers an event onClick", () => {
     expect(handleClick).toBeCalled();
 });
 
-test.each<VariantProps>([["primary"], ["secondary"], ["danger"], ["success"]])(
-    "Renders the button using the variant %i",
-    (variant) => {
-        const { asFragment } = render(
-            <Button variant={variant}>Button</Button>,
-            {}
-        );
-        expect(asFragment).toMatchSnapshot();
-    }
-);
+test.each<[VariantProps]>([
+    ["primary"],
+    ["secondary"],
+    ["danger"],
+    ["success"],
+])("Renders the button using the variant %i", (variant) => {
+    const { asFragment } = render(
+        <Button variant={variant}>Button</Button>,
+        {}
+    );
+    expect(asFragment).toMatchSnapshot();
+});
