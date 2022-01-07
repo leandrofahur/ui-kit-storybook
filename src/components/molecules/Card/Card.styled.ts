@@ -2,7 +2,6 @@ import styled, { css } from "styled-components";
 import { CardBodyProps, CardMediaProps, CardProps } from "./Card";
 
 export const Wrapper = styled.div<CardProps>`
-    height: fit-content;
     width: ${(props) => (props.width ? `${props.width}` : "100px")};
     border: 1px solid #e0e0e0;
     border-radius: 5px;
@@ -15,16 +14,22 @@ export const Media = styled.div<CardMediaProps>`
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            height: 200px;
+            height: 180px;
         `}
 `;
 
 export const Content = styled.div<CardBodyProps>`
-    display: flex;
+    /* display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     text-align: center;
+    justify-items: space-between; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    height: fit-content;
 
     background-color: ${(props) => props.backgroundColor};
     color: ${(props) => props.color};
@@ -33,6 +38,6 @@ export const Content = styled.div<CardBodyProps>`
 
     p {
         font-size: 0.8rem;
-        padding: 10px 0;
+        padding: 15px 0;
     }
 `;

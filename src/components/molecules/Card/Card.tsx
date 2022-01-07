@@ -1,7 +1,18 @@
 import { ReactNode } from "react";
 import { Content, Media, Wrapper } from "./Card.styled";
 
-// BODY part of the card
+//#region Card Media
+export interface CardMediaProps {
+    /** Card media background Image */
+    image?: string;
+}
+
+export const CardMedia = ({ image }: CardMediaProps) => {
+    return <Media image={image} />;
+};
+//#endregion
+
+//#region Card Body
 export interface CardBodyProps {
     /** Card body text color */
     color?: string;
@@ -24,36 +35,28 @@ export const CardBody = ({
         </Content>
     );
 };
+//#endregion
 
-// MEDIA part of the card
-export interface CardMediaProps {
-    /** Card media background Image */
-    image?: string;
-}
-
-export const CardMedia = ({ image }: CardMediaProps) => {
-    return <Media image={image} />;
-};
-
-// The final card compound component:
+//#region Card
 export interface CardProps {
     /** Card width */
     width?: string;
 
     /** Card height */
-    height: string;
+    height?: string;
 
     /** A children that accepts a ReactNode */
     children?: ReactNode;
 }
 
-const Card = ({ height = "270px", width = "200px", children }: CardProps) => {
+const Card = ({ width = "200px", children }: CardProps) => {
     return (
-        <Wrapper height={height} width={width}>
+        <Wrapper width={width}>
             <div />
             {children}
         </Wrapper>
     );
 };
+//#endregion
 
 export default Card;
