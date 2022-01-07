@@ -11,25 +11,7 @@ export default {
     argTypes: {},
 } as Meta<TagProps>;
 
-const Template: Story<TagProps> = (args) => <Tag {...args} />;
-
-// export const GlutenFree = Template.bind({});
-// GlutenFree.args = {
-//     icon: GiSlicedBread,
-//     children: <p>Gluten Free</p>,
-// };
-
-// export const AllergyFree = Template.bind({});
-// AllergyFree.args = {
-//     icon: FaBomb,
-//     children: <p>Allergy Free</p>,
-// };
-
-// export const PeanutFree = Template.bind({});
-// PeanutFree.args = {
-//     icon: GiPeanut,
-//     children: <p>Peanut Free</p>,
-// };
+// const Template: Story<TagProps> = (args) => <Tag {...args} />;
 
 export const All = () => {
     return (
