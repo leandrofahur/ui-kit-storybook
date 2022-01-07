@@ -2,7 +2,7 @@ import { Story, Meta } from "@storybook/react";
 import Link, { LinkProps } from "./Link";
 
 export default {
-    title: "Components/atoms/Link",
+    title: "Components/Atoms/Link",
     component: Link,
     argTypes: {},
 } as Meta<LinkProps>;

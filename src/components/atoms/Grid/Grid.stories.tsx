@@ -3,7 +3,7 @@ import Grid, { GridProps } from "./Grid";
 import styled from "styled-components";
 
 export default {
-    title: "Components/atoms/Grid",
+    title: "Components/Atoms/Grid",
     component: Grid,
     argTypes: {},
 } as Meta<GridProps>;

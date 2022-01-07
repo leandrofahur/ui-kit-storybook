@@ -6,7 +6,7 @@ import { FaBomb } from "react-icons/fa";
 import Grid from "../Grid";
 
 export default {
-    title: "Components/atoms/Tag",
+    title: "Components/Atoms/Tag",
     component: Tag,
     argTypes: {},
 } as Meta<TagProps>;

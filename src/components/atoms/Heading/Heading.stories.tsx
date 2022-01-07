@@ -5,7 +5,7 @@ import styled from "styled-components";
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-    title: "Components/atoms/Heading",
+    title: "Components/Atoms/Heading",
     component: Heading,
     argTypes: {},
 } as Meta<HeadingProps>;

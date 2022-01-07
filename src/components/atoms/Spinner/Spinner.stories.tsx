@@ -1,11 +1,11 @@
 import { Story, Meta } from "@storybook/react";
 import { theme } from "config/theme";
 import styled from "styled-components";
-import Grid from "../Grid";
+
 import Spinner, { SpinnerProps } from "./Spinner";
 
 export default {
-    title: "Components/atoms/Spinner",
+    title: "Components/Atoms/Spinner",
     component: Spinner,
     argTypes: {
         color: {
@@ -94,19 +94,19 @@ export const All = () => {
                     complementaryColor={"#e6e6e6"}
                     color={"#333"}
                     size={25}
-                    thickness={7}
+                    thickness={2.5}
                 />
                 <Spinner
                     complementaryColor={"#e6e6e6"}
                     color={"red"}
                     size={25}
-                    thickness={7}
+                    thickness={2.5}
                 />
                 <Spinner
                     complementaryColor={"#e6e6e6"}
                     color={"green"}
                     size={25}
-                    thickness={7}
+                    thickness={2.5}
                 />
             </Container>
         </>

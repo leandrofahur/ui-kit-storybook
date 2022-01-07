@@ -11,7 +11,7 @@ import Card04 from "../../../assets/images/card04.jpeg";
 import Card05 from "../../../assets/images/card05.jpeg";
 
 export default {
-    title: "Components/molecules/Card",
+    title: "Components/Molecules/Card",
     component: Card,
     subcomponents: { CardBody, CardMedia },
     argTypes: {},
