@@ -76,6 +76,10 @@ export const GlobalStyle = createGlobalStyle`
         }
     }
 
+    p {
+        line-height: 1.5rem;
+    }
+
     a {
         text-decoration: none;
     }

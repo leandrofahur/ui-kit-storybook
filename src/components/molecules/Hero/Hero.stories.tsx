@@ -20,7 +20,6 @@ Basic.args = {
     children: (
         <>
             <h1>Title</h1>
-            <h2>Subtitle</h2>
         </>
     ),
 };
@@ -38,4 +37,9 @@ WithList.args = {
             </ul>
         </>
     ),
+};
+
+export const OnlyImage = Template.bind({});
+OnlyImage.args = {
+    image: HeroCover,
 };

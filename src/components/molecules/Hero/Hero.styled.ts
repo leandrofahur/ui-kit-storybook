@@ -1,10 +1,6 @@
 import styled, { css } from "styled-components";
 import { Breakpoints, breakpointAt } from "../../../styles/Breakpoints";
 
-type WrapperProps = {
-    image?: string;
-};
-
 export const Container = styled.div`
     width: 100%;
     padding: 0px 8px;
@@ -20,6 +16,11 @@ export const Container = styled.div`
     }
 `;
 
+type WrapperProps = {
+    height: string;
+    image?: string;
+};
+
 export const Wrapper = styled.div<WrapperProps>`
     ${(props) =>
         css`
@@ -28,15 +29,14 @@ export const Wrapper = styled.div<WrapperProps>`
             background-position: center;
             background-repeat: no-repeat;
             background-blend-mode: overlay;
-            background-color: rgba(0, 0, 0, 0.4);
+            background-color: rgba(0, 0, 0, 0.15);
         `}
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    text-align: center;
+    align-items: flex-start;
 
-    padding: 30px;
+    height: ${(props) => (props.height ? `${props.height}` : "100%")};
 `;
 
 export const Content = styled.div`
@@ -55,4 +55,5 @@ export const Content = styled.div`
     }
     // TODO: Remove hardcoded color:
     color: white;
+    padding-left: 50px;
 `;
