@@ -8,9 +8,11 @@ export const Wrapper = styled.div<GridProps>`
     grid-column-gap: 16px;
     grid-row-gap: 16px;
     grid-template-columns: ${(props) => `repeat(${props.numOfColumns}, 1fr)`};
+    justify-items: center;
+
     /* grid-template-columns: repeat(4, 1fr); */
 
-    /* ${breakpointAt(Breakpoints.xs)} {
+    ${breakpointAt(Breakpoints.xs)} {
         grid-template-columns: repeat(1, 1fr);
     }
     ${breakpointAt(Breakpoints.sm)} {
@@ -21,14 +23,14 @@ export const Wrapper = styled.div<GridProps>`
     }
     ${breakpointAt(Breakpoints.lg)} {
         grid-template-columns: ${(props) =>
-        `repeat(${props.numOfColumns}, 1fr)`};
+            `repeat(${props.numOfColumns}, 1fr)`};
     }
     ${breakpointAt(Breakpoints.xl)} {
         grid-template-columns: ${(props) =>
-        `repeat(${props.numOfColumns}, 1fr)`};
+            `repeat(${props.numOfColumns}, 1fr)`};
     }
     ${breakpointAt(Breakpoints.xlg)} {
         grid-template-columns: ${(props) =>
-        `repeat(${props.numOfColumns}, 1fr)`};
-    } */
+            `repeat(${props.numOfColumns}, 1fr)`};
+    }
 `;
