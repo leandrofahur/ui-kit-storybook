@@ -1,10 +1,11 @@
 export const Breakpoints = {
+    xxs: 321,
     xs: 376,
-    sm: 415,
-    md: 768,
-    lg: 992,
-    xl: 1200,
-    xlg: 1450,
+    sm: 426,
+    md: 769,
+    lg: 1025,
+    xlg: 1441,
+    xxlg: 1537,
 };
 
 export const breakpointAt = (size: number): string => {

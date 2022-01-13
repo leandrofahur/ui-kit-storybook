@@ -5,12 +5,13 @@ import "jest-styled-components";
 
 test.each([
     [
+        Breakpoints.xxs,
         Breakpoints.xs,
         Breakpoints.sm,
         Breakpoints.md,
         Breakpoints.lg,
-        Breakpoints.xl,
         Breakpoints.xlg,
+        Breakpoints.xxlg,
     ],
 ])("Breakpoint for %i", (size) => {
     expect(breakpointAt(size)).toEqual(`@media(min-width: ${size}px)`);
