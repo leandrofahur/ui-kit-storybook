@@ -10,15 +10,6 @@ export const theme = {
             backgroundColor: "#fff",
             _hover: "#385d66",
         },
-        // dashboard: {
-        //     color: "#fff",
-        //     backgroundColor: "#2b3ecf",
-        //     _hover: "#4e73df",
-        // },
-        label: {
-            color: "#122f34",
-            backgroundColor: "#385d66",
-        },
         danger: {
             color: "#fff",
             backgroundColor: "#e53e3e",

@@ -5,7 +5,7 @@ export { default as Grid } from "./atoms/Grid";
 export { default as Heading } from "./atoms/Heading";
 export { default as Link } from "./atoms/Link";
 export { default as Spinner } from "./atoms/Spinner";
-export { default as Tag } from "./atoms/Tag";
+export { default as Tag } from "./atoms/Label";
 export { default as Input } from "./atoms/Input";
 
 // Molecules:
