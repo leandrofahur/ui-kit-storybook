@@ -1,11 +1,11 @@
 export const theme = {
     colors: {
-        primary: {
+        solid: {
             color: "#fff",
             backgroundColor: "#122f34",
             _hover: "#385d66",
         },
-        secondary: {
+        outline: {
             color: "#1a2f33",
             backgroundColor: "#fff",
             _hover: "#385d66",
@@ -14,6 +14,11 @@ export const theme = {
             color: "#fff",
             backgroundColor: "#e53e3e",
             _hover: "#f56565",
+        },
+        warning: {
+            color: "#fff",
+            backgroundColor: "#d69e2e",
+            _hover: "#ecc94b",
         },
         success: {
             color: "#fff",
