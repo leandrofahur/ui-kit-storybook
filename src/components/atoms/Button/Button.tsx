@@ -4,7 +4,8 @@ import {
     MouseEventHandler,
     ReactNode,
 } from "react";
-import { BaseButton, CustomButton } from "./Button.styled";
+import Icon from "../Icon";
+import { CustomButton } from "./Button.styled";
 
 export type VariantProps =
     | "solid"
@@ -84,11 +85,12 @@ const Button = ({
 }: ButtonProps) => {
     return (
         <CustomButton
+            as={href ? "a" : "button"}
             variant={variant}
             color={color}
             backgroundColor={backgroundColor}
             _hover={_hover}
-            isDisabled={isDisabled}
+            isDisabled={isLoading ? true : isDisabled}
             disabled={isDisabled}
             isLoading={isLoading}
             height={height}
@@ -96,11 +98,14 @@ const Button = ({
             margin={margin}
             padding={padding}
             href={isDisabled ? undefined : href}
+            target="_blank"
             className={className}
             onClick={onClick}
             {...rest}
         >
+            {leftIcon && <Icon icon={leftIcon} margin="0 7px 0 0" />}
             {children}
+            {rightIcon && <Icon icon={rightIcon} margin="0 0 0 7px" />}
         </CustomButton>
     );
 };
