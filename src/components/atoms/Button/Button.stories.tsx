@@ -91,6 +91,22 @@ RightIcon.args = {
 };
 //#endregion
 
+//#region States
+export const Disabled = Template.bind({});
+Disabled.args = {
+    variant: "solid",
+    isDisabled: true,
+    children: "Solid",
+};
+
+export const Loading = Template.bind({});
+Loading.args = {
+    variant: "solid",
+    children: "Solid",
+    isLoading: true,
+};
+//#endregion
+
 //#region Geometry
 export const Width = Template.bind({});
 Width.args = {
@@ -251,15 +267,14 @@ export const Summary = () => {
                     </Button>
                 </HStack>
                 <h6>Loading</h6>
-                ...
-                {/* <HStack>
-                    <Button variant="solid" isLoading>
+                <HStack>
+                    <Button variant="solid" isLoading margin="10px">
                         Solid
                     </Button>
-                    <Button variant="outline" isLoading>
+                    <Button variant="outline" isLoading margin="10px">
                         Outline
                     </Button>
-                </HStack> */}
+                </HStack>
             </VStack>
             <h4>Actions</h4>
             <VStack>

@@ -5,6 +5,7 @@ import {
     ReactNode,
 } from "react";
 import Icon from "../Icon";
+import Progress from "../Progress";
 import { CustomButton } from "./Button.styled";
 
 export type VariantProps =
@@ -79,6 +80,35 @@ const Button = ({
     children,
     ...rest
 }: ButtonProps) => {
+    if (isLoading) {
+        return (
+            <CustomButton
+                variant={variant}
+                color={color}
+                backgroundColor={backgroundColor}
+                _hover={_hover}
+                isDisabled={true}
+                disabled={isDisabled}
+                isLoading={isLoading}
+                height={height}
+                width={width}
+                margin={margin}
+                padding={padding}
+                className={className}
+                {...rest}
+            >
+                <Progress
+                    variant="circular"
+                    // TODO: Generalize the props for the radius to self setup
+                    radius={"1em"}
+                    color={color ? color : "#333"}
+                    margin="0 10px 0 0"
+                />
+                Loading
+            </CustomButton>
+        );
+    }
+
     return (
         <CustomButton
             variant={variant}

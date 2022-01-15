@@ -5,8 +5,8 @@ export interface CircularProgressProps {
     /** Provides the ability to choose the component text color. */
     color: string;
 
-    /** Provides the radius of the componentin px */
-    radius: number;
+    /** Provides the radius for the component: [up right down left] [up/down left/right]. */
+    radius?: string;
 
     /** Provides the margin for the component: [up right down left] [up/down left/right]. */
     margin?: string;
@@ -39,8 +39,8 @@ export interface ProgressProps {
     /** Provides the basic variations required for the component: 'solid' | 'outline' | 'danger' | 'warning' | 'success'. */
     variant: VariantProps;
 
-    /** Provides the radius of the componentin px */
-    radius: number;
+    /** Provides the radius for the component: [up right down left] [up/down left/right]. */
+    radius?: string;
 
     /** Provides the ability to choose the component text color. */
     color: string;

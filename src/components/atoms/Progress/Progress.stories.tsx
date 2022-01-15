@@ -11,6 +11,6 @@ const Template: Story<ProgressProps> = (args) => <Progress {...args} />;
 
 export const Circular = Template.bind({});
 Circular.args = {
-    radius: 30,
+    radius: "30px",
     color: "#3182ce",
 };
