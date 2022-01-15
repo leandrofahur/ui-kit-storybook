@@ -36,6 +36,9 @@ export const BaseInput = styled.input<InputProps>`
 
     &:focus {
         outline: none;
-        border: 1.5px solid ${(props) => props._focus};
+        border: ${(props) =>
+            props.error
+                ? `1px solid ${props.theme.colors.danger.backgroundColor}`
+                : `1.5px solid ${props._focus}`};
     }
 `;
