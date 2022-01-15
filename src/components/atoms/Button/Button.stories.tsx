@@ -1,8 +1,7 @@
 import { Story, Meta } from "@storybook/react";
-import styled from "styled-components";
 import Button, { ButtonProps } from "./Button";
+import styled from "styled-components";
 import Icon from "../Icon";
-
 import { FaAngellist } from "react-icons/fa";
 
 export default {
@@ -142,10 +141,6 @@ const HStack = styled.div`
     align-items: center;
     width: 100%;
     margin: 20px 0;
-
-    & > * {
-        margin: 0 10px;
-    }
 `;
 
 const VStack = styled.div`
@@ -166,11 +161,21 @@ export const Summary = () => {
         <>
             <h4>Variants</h4>
             <HStack>
-                <Button variant="solid">Solid</Button>
-                <Button variant="outline">Outline</Button>
-                <Button variant="danger">Danger</Button>
-                <Button variant="warning">Warning</Button>
-                <Button variant="success">Success</Button>
+                <Button variant="solid" margin="10px">
+                    Solid
+                </Button>
+                <Button variant="outline" margin="10px">
+                    Outline
+                </Button>
+                <Button variant="danger" margin="10px">
+                    Danger
+                </Button>
+                <Button variant="warning" margin="10px">
+                    Warning
+                </Button>
+                <Button variant="success" margin="10px">
+                    Success
+                </Button>
             </HStack>
             <h4>Custom</h4>
             <HStack>
@@ -179,6 +184,7 @@ export const Summary = () => {
                     color="#fff"
                     backgroundColor="#3182ce"
                     _hover="#4299e1"
+                    margin="10px"
                 >
                     Solid
                 </Button>
@@ -187,6 +193,7 @@ export const Summary = () => {
                     color="#3182ce"
                     backgroundColor="#fff"
                     _hover="#4299e1"
+                    margin="10px"
                 >
                     Outline
                 </Button>
@@ -198,6 +205,7 @@ export const Summary = () => {
                     color="#fff"
                     backgroundColor="#3182ce"
                     _hover="#4299e1"
+                    margin="10px"
                 >
                     <Icon icon={FaAngellist} />
                 </Button>
@@ -206,6 +214,7 @@ export const Summary = () => {
                     color="#3182ce"
                     backgroundColor="#fff"
                     _hover="#4299e1"
+                    margin="10px"
                 >
                     <FaAngellist />
                 </Button>
@@ -215,6 +224,7 @@ export const Summary = () => {
                     backgroundColor="#3182ce"
                     _hover="#4299e1"
                     leftIcon={FaAngellist}
+                    margin="10px"
                 >
                     Cheer Up!
                 </Button>
@@ -224,6 +234,7 @@ export const Summary = () => {
                     backgroundColor="#fff"
                     _hover="#4299e1"
                     rightIcon={FaAngellist}
+                    margin="10px"
                 >
                     Cheer Up!
                 </Button>
@@ -232,45 +243,65 @@ export const Summary = () => {
             <VStack>
                 <h6>Disabled</h6>
                 <HStack>
-                    <Button variant="solid" isDisabled>
+                    <Button variant="solid" isDisabled margin="10px">
                         Solid
                     </Button>
-                    <Button variant="outline" isDisabled>
+                    <Button variant="outline" isDisabled margin="10px">
                         Outline
                     </Button>
                 </HStack>
                 <h6>Loading</h6>
-                <HStack>
+                ...
+                {/* <HStack>
                     <Button variant="solid" isLoading>
                         Solid
                     </Button>
                     <Button variant="outline" isLoading>
                         Outline
                     </Button>
-                </HStack>
+                </HStack> */}
             </VStack>
-
+            <h4>Actions</h4>
+            <VStack>
+                <h6>Clickable</h6>
+                <Button
+                    variant="solid"
+                    onClick={() => {
+                        alert("Hello World!!!");
+                    }}
+                >
+                    Solid
+                </Button>
+                <h6>Anchor tag</h6>
+                <a
+                    href="https://veganofoods.com"
+                    target="_blank"
+                    rel="noreferrer"
+                >
+                    <Button variant="solid">Solid</Button>
+                </a>
+            </VStack>
             <h4>Geometry</h4>
             <VStack>
                 <h6>Width</h6>
-                <Button variant="solid" width="100%">
+                <Button variant="solid" width="100%" margin="10px">
                     Solid
                 </Button>
-                <Button variant="solid" width="50%">
+                <Button variant="solid" width="50%" margin="10px">
                     Solid
                 </Button>
-                <Button variant="solid" width="200px">
+                <Button variant="solid" width="200px" margin="10px">
                     Solid
                 </Button>
-                <Button variant="solid" width="fit-content">
+                <Button variant="solid" width="fit-content" margin="10px">
                     Solid
                 </Button>
                 <h6>Height</h6>
-                <Button variant="solid" height="200px">
+                <Button variant="solid" height="200px" margin="10px">
                     Solid
                 </Button>
                 <h6>Padding</h6>
-                <Button variant="solid" padding="30px">
+                <Button variant="solid" padding="30px" margin="10px">
                     Solid
                 </Button>
                 <h6>Margin</h6>

@@ -14,7 +14,7 @@ export const BaseButton = styled.button<ButtonProps>`
 
     // measurements related to size:
     padding: ${(props) => (props.padding ? `${props.padding}` : "12px 24px")};
-    margin: ${(props) => (props.margin ? `${props.margin}` : "undefined")};
+    margin: ${(props) => (props.margin ? `${props.margin}` : "0px")};
     width: ${(props) => (props.width ? `${props.width}` : "fit-content")};
     height: ${(props) => (props.height ? `${props.height}` : "fit-content")};
 

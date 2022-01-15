@@ -51,9 +51,6 @@ export interface ButtonProps extends HTMLAttributes<HTMLButtonElement> {
     /** Provides the padding for the component: [up right down left] [up/down left/right]. */
     padding?: string;
 
-    /** If the button is of the 'link' variant.  */
-    href?: string;
-
     /** Provides a className variable for inline styling. */
     className?: string;
 
@@ -77,7 +74,6 @@ const Button = ({
     width,
     margin,
     padding,
-    href,
     className,
     onClick,
     children,
@@ -85,20 +81,17 @@ const Button = ({
 }: ButtonProps) => {
     return (
         <CustomButton
-            as={href ? "a" : "button"}
             variant={variant}
             color={color}
             backgroundColor={backgroundColor}
             _hover={_hover}
-            isDisabled={isLoading ? true : isDisabled}
+            isDisabled={isDisabled}
             disabled={isDisabled}
             isLoading={isLoading}
             height={height}
             width={width}
             margin={margin}
             padding={padding}
-            href={isDisabled ? undefined : href}
-            target="_blank"
             className={className}
             onClick={onClick}
             {...rest}
